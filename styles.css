@@ -1,0 +1,657 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300&family=Nanum+Gothic&display=swap");
+
+:root {
+  --gold: #846c48;
+  --white: #ffffff;
+  --ash: #ededee;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+router-link {
+  text-decoration: none;
+  color: inherit;
+  text-underline-offset: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  image-rendering: -webkit-optimize-contrast;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font-family: "Mukta", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  /* color:var(--text-color1);;
+    background-color:var(--cyann);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var(--black), .4) rgba(var(--white), .1); */
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4rem;
+  align-items: center;
+}
+
+.social-media-icons {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.social-media-icons svg:hover {
+  fill: var(--gold);
+}
+
+.social-media-icons svg:hover {
+  fill: var(--gold);
+}
+
+.nav-logo img {
+  width: 200px;
+}
+
+.nav-logo button,
+.event-videos button,
+button {
+  padding: 10px 15px;
+  background-color: var(--gold);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-links {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  padding: 15px 4rem;
+  cursor: pointer;
+}
+.nav-links li :hover {
+  color: var(--gold);
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 6rem;
+  cursor: pointer;
+}
+
+.menu-icon:hover {
+  color: var(--gold);
+  fill: var(--gold);
+}
+
+.menu-icon span {
+  margin: 0 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 65%;
+}
+
+.event-videos {
+  padding: 15px 4rem;
+  position: relative;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.watch-buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.event-videos button {
+  position: absolute;
+  top: 85%;
+}
+.event-videos a {
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 0%;
+  animation: alink 5s ease-out 7s infinite;
+
+  transform: translateY(0%);
+}
+
+@-webkit-keyframes alink {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.video-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1;
+}
+
+.watch-Video {
+  background-color: var(--white);
+  padding: 10px;
+  position: relative;
+}
+
+.close-video {
+  position: absolute;
+  fill: var(--white);
+  top: 4%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.about-lincoln-holding {
+  background-color: var(--ash);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-lincoln-holding .text-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.our-venues-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  display: none;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(16, 16, 16);
+  color: #846c48;
+  opacity: 0;
+  transition: opacity 5s ease-in;
+  font-size: 3.5rem;
+}
+.our-venues-container .header {
+  margin-bottom: 5rem;
+}
+.our-venues-container .img-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.our-venues-container .img-container img {
+  width: 15%;
+  cursor: pointer;
+}
+
+.close-venues {
+  position: absolute;
+  cursor: pointer;
+  fill: #ffffff;
+  right: 1.5%;
+  top: 3%;
+}
+
+.about-lincoln-holding p {
+  line-height: 1.5;
+}
+.about-lincoln-holding h4 {
+  letter-spacing: 2px;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.about-lincoln-holding h1 {
+  margin-bottom: 20px;
+
+  letter-spacing: 2px;
+  font-size: 39px;
+  font-weight: 600;
+}
+
+.pictures-pages-container {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-flow: nowrap;
+}
+
+.pictures-frame {
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+#animateBook {
+  position: absolute;
+  border: none;
+  width: 1229px;
+  height: 100%;
+  inset: 0px;
+  margin: 0 auto;
+  top: 230%;
+}
+.pictures-pages-container svg {
+  fill: rgb(179, 179, 180);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.events-containter {
+  background-color: var(--ash);
+  width: 83%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.events-containter img {
+  width: 100%;
+  height: 305px;
+  margin-bottom: 3rem;
+}
+
+.events-containter h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+.events-containter h5 {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.event-content {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1rem;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  margin-bottom: 2.5rem;
+}
+
+.event-content p {
+  margin-bottom: 2.5rem;
+}
+
+.events-containter .event {
+  width: 48%;
+  margin-bottom: 2rem;
+}
+.our-team {
+  padding: 4rem 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.our-team-header {
+  margin-bottom: 1.8rem;
+}
+.our-team img {
+  max-width: 100%;
+}
+.our-team span {
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  padding: 0.3rem;
+  display: inline-block;
+  margin: 3px;
+  cursor: pointer;
+}
+.teams-indicator {
+  position: absolute;
+  top: 83%;
+  right: 45%;
+}
+
+.slide-container {
+  padding: 10px;
+  position: relative;
+}
+
+.active-term-slide {
+  background-color: var(--gold);
+}
+
+.fade-term {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.member-details {
+  color: var(--white);
+  width: 90%;
+  top: 60%;
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 4%;
+}
+.member-details {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.member-details h1 {
+  font-size: 1rem;
+}
+
+.our-awards {
+  margin-bottom: 2rem;
+}
+.awards-container-main {
+  overflow: hidden;
+  width: 85%;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+}
+
+.award-img-container {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 30%; */
+}
+.awards-container {
+  display: flex;
+  padding: 2.5rem 0rem;
+  flex-wrap: nowrap;
+  transform: translateX(0%);
+}
+
+.Our-awards-header {
+  text-align: center;
+}
+.Our-awards-header h1 {
+  font-size: 2.5rem;
+}
+.Our-awards-header h5 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.award-img-container img {
+  max-width: 270px;
+  max-height: 270px;
+}
+
+.gallery-container {
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+#galleryContainer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgb(16, 16, 16, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.direction-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.direction-btn div {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.direction-btn div svg {
+  fill: #ffffff;
+  cursor: pointer;
+}
+
+.images {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  transform: translateX(0%);
+}
+.images div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.images .gallery-img {
+  margin: 0 27.4rem;
+  width: 35% !important;
+}
+#closeGalleryContainer {
+  position: absolute;
+  fill: white;
+  top: 3%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.gallery-header h5,
+.our-team h5 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+.gallery-header h1,
+.our-team h1 {
+  font-size: 39px;
+}
+.images-container {
+  margin-bottom: 1.5rem;
+}
+.images-container h5 {
+  padding: 20px 25px;
+}
+.images-container h5 {
+  text-align: left;
+}
+.gallery .gallery-img {
+  max-width: 22%;
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+}
+
+footer {
+  background: var(--ash);
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  padding-bottom: 0rem;
+}
+
+footer img {
+  width: 180px;
+}
+
+footer .about {
+  text-align: right;
+  width: 20%;
+  padding: 20px;
+}
+footer .about p,
+footer button,
+footer .footer-icons {
+  margin-bottom: 10px;
+}
+
+footer button {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+footer .contact {
+  text-align: center;
+  width: 25%;
+  margin-left: 4rem;
+}
+
+footer h1 {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+footer .contact p {
+  line-height: 1.5;
+}

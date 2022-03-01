@@ -94,8 +94,20 @@ $(function () {
 
   let slideCount = 0
 
+  $('.gallery-img').click(function () {
+    $('.images .gallery-img').each(element => {
+      if ($(this)[0].src === $('.gallery-img')[element].src) {
+        slideCount = -100 * element
+        $('.images').css({
+          transform: ` translateX(${slideCount}%)`,
+          transition: ' transform  0.5s ease-in'
+        })
+      }
+    })
+  })
+
   $('#next-image').click(() => {
-    if (slideCount === -1400) {
+    if (slideCount === -1500) {
       return $('#previous-image').css({ fill: '#ededee' })
     }
     slideCount -= 100
@@ -115,6 +127,7 @@ $(function () {
       transition: ' transform  0.5s ease-in'
     })
   })
+
   $('#closeGalleryContainer').click(() => {
     $('#galleryContainer').css({ display: 'none' })
   })
@@ -132,6 +145,7 @@ $(function () {
   const slidesIndicatorsContainer = document.querySelector('#teams-indicator')
   let slideIndex = 0
   let replaySlide = true
+
   const animateSlides = () => {
     for (const element of slidesImages) element.style = 'display:none;opacity:0'
     slideIndex++

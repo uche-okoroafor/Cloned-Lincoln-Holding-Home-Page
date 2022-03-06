@@ -106,6 +106,42 @@ $(function () {
     })
   })
 
+  $('#menu-mobile').click(() => {
+    $('#menu-mobile').css({
+      display: `none`
+    })
+    $('#close-menu').css({
+      display: `block`
+    })
+    $('#mobile-menu').css({
+      display: 'block'
+    })
+    setTimeout(() => {
+      $('#mobile-menu').css({
+        height: '400px',
+        transition: ' height  0.25s linear'
+      })
+    }, 50)
+  })
+
+  $('#close-menu').click(() => {
+    $('#menu-mobile').css({
+      display: `block`
+    })
+    $('#close-menu').css({
+      display: `none`
+    })
+    $('#mobile-menu').css({
+      height: '0',
+      transition: ' height  0.25s linear'
+    })
+    setTimeout(() => {
+      $('#mobile-menu').css({
+        display: 'none'
+      })
+    }, 250)
+  })
+
   $('#next-image').click(() => {
     if (slideCount === -1500) {
       return $('#previous-image').css({ fill: '#ededee' })
